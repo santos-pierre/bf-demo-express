@@ -1,0 +1,23 @@
+{
+	"name": "demo-express",
+	"version": "0.1.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"dev": "nodemon",
+		"format": "prettier --write .",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"author": "Santos Pierre",
+	"license": "ISC",
+	"devDependencies": {
+		"nodemon": "^2.0.15",
+		"prettier": "^2.5.1"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.2",
+		"express": "^4.17.3",
+		"uuid": "^8.3.2"
+	}
+}
