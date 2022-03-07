@@ -1,5 +1,6 @@
 const express = require('express');
 const { users } = require('../data/index.json');
+const User = require('../model/User');
 const uuidv4 = require('uuid').v4;
 
 const userRouter = express.Router();
@@ -10,13 +11,7 @@ userRouter
 		return res.status(200).json(users);
 	})
 	.post(({ body }, res) => {
-		const { name, age } = body;
-		const newUser = {
-			id: uuidv4(),
-			name,
-			age,
-		};
-		users.push(newUser);
+		const newUser = User.create({ ...body });
 		return res.status(201).json(newUser);
 	});
 
